@@ -1,9 +1,9 @@
-import dotenv from "dotenv";
-import db from "./db/db";
-import app from "./app";
+import dotenv from 'dotenv';
+import app from './app';
+import db from './db/db';
 
 dotenv.config({
-    path: "./.env",
+    path: './.env',
 });
 
 db()
@@ -13,5 +13,5 @@ db()
         });
     })
     .catch((err) => {
-        console.log("MONGO db connection failed !!! ", err);
+        console.log('MONGO db connection failed !!! ', err);
     });
