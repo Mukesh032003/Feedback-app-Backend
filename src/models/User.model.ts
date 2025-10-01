@@ -76,7 +76,7 @@ userSchema.methods.accessToken = function (): string {
     }
 
     const options: SignOptions = {
-        expiresIn: process.env.ACCESS_TOKEN_EXPIRY as any,
+        expiresIn: process.env.ACCESS_TOKEN_EXPIRY as any || 864000,
     };
 
     return jwt.sign(
