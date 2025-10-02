@@ -82,7 +82,7 @@ userSchema.methods.accessToken = function (): string {
     return jwt.sign(
         {
             _id: this._id,
-            role: this.role,
+            roles: this.roles,
         },
         secret,
         options,
